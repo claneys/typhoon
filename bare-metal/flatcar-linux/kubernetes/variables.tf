@@ -74,6 +74,18 @@ variable "worker_node_taints" {
 
 # configuration
 
+variable "kv_version" {
+  type        = string
+  description = "kube-vip version"
+  default     = "v.0.4.4"
+}
+
+variable "kv_interface" {
+  type        = string
+  description = "Set the INTERFACE name to the name of the interface on the control plane(s) which will announce the VIP. In many Linux distributions this can be found with the 'ip a' command."
+  default     = "eno1"
+}
+
 variable "k8s_domain_name" {
   type        = string
   description = "Controller DNS name which resolves to a controller instance. Workers and kubeconfig's will communicate with this endpoint (e.g. cluster.example.com)"

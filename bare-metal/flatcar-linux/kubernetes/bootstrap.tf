@@ -4,6 +4,8 @@ module "bootstrap" {
 
   cluster_name                    = var.cluster_name
   api_servers                     = [var.k8s_domain_name]
+  kv_version                      = var.kv_version
+  kv_interface                    = var.kv_interface
   etcd_servers                    = var.controllers.*.domain
   networking                      = var.networking
   network_mtu                     = var.network_mtu
