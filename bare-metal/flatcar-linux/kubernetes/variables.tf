@@ -77,7 +77,7 @@ variable "worker_node_taints" {
 variable "kv_version" {
   type        = string
   description = "kube-vip version"
-  default     = "v.0.4.4"
+  default     = "v0.4.4"
 }
 
 variable "kv_interface" {
