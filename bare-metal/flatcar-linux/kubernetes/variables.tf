@@ -32,6 +32,7 @@ variable "controllers" {
     name   = string
     mac    = string
     domain = string
+    kubevip_interface = string
   }))
   description = <<EOD
 List of controller machine details (unique name, identifying MAC address, FQDN)
@@ -77,14 +78,8 @@ variable "worker_node_taints" {
 variable "kv_version" {
   type        = string
   description = "kube-vip version"
-  default     = "v0.4.4"
 }
 
-variable "kv_interface" {
-  type        = string
-  description = "Set the INTERFACE name to the name of the interface on the control plane(s) which will announce the VIP. In many Linux distributions this can be found with the 'ip a' command."
-  default     = "eno1"
-}
 
 variable "k8s_domain_name" {
   type        = string
